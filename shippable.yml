@@ -1,0 +1,4 @@
+build:
+  ci:
+    - echo $foo  
+    - cat /tmp/ssh/00_sub
