@@ -33,11 +33,23 @@ shippable_decrypt() {
   echo "shippable_decrypt: Decrypted $source_file to $source_file.decrypted"
 }
 
-#tmpfile=$(mktemp)
-cat config.json | jq '.key' > y.txt
-#sed -n 3p config.json>patch
-#sed -i 3rpatch tmpfile
-shippable_decrypt "/home/shippable/decrypt/y.txt" "/home/shippable/decrypt/key.pem"
+#cat "/home/shippable/decrypt/encrypted.txt"
+shippable_decrypt "/home/shippable/decrypt/encrypt.txt" "/home/shippable/decrypt/key.pem"
+# cp  newfile.txt
 
+# file="newfile.txt"
 
-#rm "$tmpfile"
+# let count=0
+# while read LINE 
+# do
+#   ((count++))
+# #echo checks line by line
+#   echo $LINE > $file
+#   echo "================starting==================="
+
+#   out1="shippable_decrypt "$file" "/tmp/ssh/00_sub" "
+#   echo $out1
+# done 
+
+# echo "number of strings encrypted"
+# echo $count 
